@@ -1,0 +1,26 @@
+{
+  "name": "getdeep",
+  "version": "1.0.0",
+  "description": "like .get but goes all the way down",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukechinworth/getdeep.git"
+  },
+  "keywords": [
+    "get",
+    "deep"
+  ],
+  "author": "Luke Chinworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukechinworth/getdeep/issues"
+  },
+  "homepage": "https://github.com/lukechinworth/getdeep#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
