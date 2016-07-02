@@ -1,6 +1,6 @@
 {
   "name": "getdeep",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "like .get but goes all the way down",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = function(key, object) {
+module.exports = getDeep;
+
+function getDeep(key, object) {
     
     if (Array.isArray(object)) {
 
@@ -20,4 +22,4 @@ module.exports = function(key, object) {
     }
 
     return object;
-};
+}
