@@ -165,6 +165,6 @@ describe('getDeep', function() {
 
     it('should not modify the input', function() {
         Object.freeze(in4);
-        getDeep.bind(null, 'en', in4).should.not.throw()
+        chai.expect(getDeep.bind(null, 'en', in4)).to.not.throw();
     })
 });
