@@ -164,8 +164,7 @@ describe('getDeep', function() {
     });
 
     it('should not modify the input', function() {
-        getDeep('en', in4).should.deep.equal(out4);
-
-        in4.should.not.deep.equal(out4);
+        Object.freeze(in4);
+        getDeep.bind(null, 'en', in4).should.not.throw()
     })
 });
