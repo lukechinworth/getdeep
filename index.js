@@ -2,24 +2,26 @@
 
 module.exports = getDeep;
 
-function getDeep(key, object) {
+function getDeep(key, thing) {
     
-    if (Array.isArray(object)) {
+    if (Array.isArray(thing)) {
 
-        return object.map(function(item) {
+        return thing.map(function(item) {
             return getDeep(key, item)
         });
 
-    } else if (typeof object === 'object') {
+    } else if (typeof thing === 'object') {
 
-        if (object[key]) {
-            return object[key];
+        if (thing[key]) {
+            return thing[key];
         }
 
-        Object.keys(object).forEach(function(k) {
-            object[k] = getDeep(key, object[k]);
-        });
+        return Object.keys(thing).reduce(function(acc, k) {
+            acc[k] = getDeep(key, thing[k]);
+
+            return acc;
+        }, {});
     }
 
-    return object;
+    return thing;
 }

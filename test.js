@@ -151,7 +151,7 @@ describe('getDeep', function() {
         getDeep('en', in1).should.deep.equal(out1);
     });
 
-    it('should return string of language key in place of the language object', function() {
+    it('should get object[prop][key] on each prop of object that is type object', function() {
         getDeep('en', in2).should.deep.equal(out2);
     });
 
@@ -162,4 +162,10 @@ describe('getDeep', function() {
     it('should work on nested objects and arrays', function() {
         getDeep('en', in4).should.deep.equal(out4);
     });
+
+    it('should not modify the input', function() {
+        getDeep('en', in4).should.deep.equal(out4);
+
+        in4.should.not.deep.equal(out4);
+    })
 });
