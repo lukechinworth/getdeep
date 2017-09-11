@@ -5,13 +5,10 @@ module.exports = getDeep;
 function getDeep(key, thing) {
     
     if (Array.isArray(thing)) {
-
-        return thing.map(function(item) {
-            return getDeep(key, item)
-        });
-
-    } else if (typeof thing === 'object') {
-
+        return thing.map(getDeep.bind(null, key));
+    }
+	
+    if (typeof thing === 'object') {
         if (thing[key]) {
             return thing[key];
         }

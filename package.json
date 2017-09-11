@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/lukechinworth/getdeep#readme",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "mocha": "^3.5.2"
   }
 }
